@@ -12,6 +12,16 @@ header nav ul {
     list-style-type: none;
 }
 
+header nav ul li a {
+    color: white; /* 글씨 색상을 흰색으로 설정 */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #ccc; /* 글씨에 마우스를 올렸을 때의 색상 설정 */
+}
+
 .balls-display {
     display: flex;
     flex-direction: column;
