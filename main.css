@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #1d0033;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #0d0d0d;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px; /* Adds padding for smaller screens */
+    box-sizing: border-box;
+}
+
+.circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #bb07e0, #4e0385);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.main-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.main-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    padding: 15px 30px;
+    background-color: #ff3366;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #ff0055;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        justify-content: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .circle {
+        width: 400px;
+        height: 400px;
+    }
+
+    .main-content h1 {
+        font-size: 2em;
+    }
+
+    .main-content p {
+        font-size: 1.2em;
+    }
+
+    .main-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-content h1 {
+        font-size: 1.5em;
+    }
+
+    .main-content p {
+        font-size: 1em;
+    }
+
+    .main-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}

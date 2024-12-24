@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 구슬 만들기</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="create.html">감정 구슬 만들기</a></li>
+                <li><a href="storage.html">기억 저장소</a></li>
+                <li><a href="favorite.html">기억할 기억</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="create-form">
+        <h2>감정 구슬 만들기</h2>
+        <form id="emotionForm">
+            <label for="emotion">감정 선택:</label>
+            <select id="emotion" name="emotion">
+                <option value="기쁨">기쁨</option>
+                <option value="슬픔">슬픔</option>
+                <option value="화남">화남</option>
+                <option value="놀람">놀람</option>
+                <option value="불안">불안</option>
+            </select>
+            <label for="description">한 줄 글쓰기:</label>
+            <input type="text" id="description" name="description" placeholder="메모를 입력하세요">
+            <button type="submit">저장하기</button>
+        </form>
+    </section>
+
+    <script src="create.js"></script>
+</body>
+</html>
