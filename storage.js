@@ -13,18 +13,25 @@ window.onload = function() {
         `;
         ballsContainer.appendChild(ballDiv);
 
-        ballDiv.addEventListener('click', function() {
+        // 구슬 클릭 시 이동 이벤트
+        ballDiv.addEventListener('click', function(event) {
+            // 삭제 버튼 클릭 시 이벤트 무시
+            if (event.target.classList.contains('delete-btn')) return;
+
             const confirmMove = confirm("구슬을 기억할 기억으로 이동하겠습니까?");
             if (confirmMove) {
                 addToFavorites(ball);
             }
         });
-    });
 
-    document.querySelectorAll('.delete-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const index = this.getAttribute('data-index');
-            removeBall(index);
+        // 삭제 버튼 클릭 이벤트
+        ballDiv.querySelector('.delete-btn').addEventListener('click', function(event) {
+            event.stopPropagation(); // 이벤트 전파 방지
+            const confirmDelete = confirm("기억을 삭제하시겠습니까?");
+            if (confirmDelete) {
+                const index = this.getAttribute('data-index');
+                removeBall(index);
+            }
         });
     });
 };
