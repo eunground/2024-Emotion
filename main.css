@@ -115,6 +115,10 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
+    header nav {
+        display: none; /* 핸드폰 화면 크기에서 네비게이션 바 숨기기 */
+    }
+
     .circle {
         width: 300px;
         height: 300px;
